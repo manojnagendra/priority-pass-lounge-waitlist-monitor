@@ -1578,11 +1578,11 @@ function LoungeDetailsDrawer({ lounge, isOpen, onClose, loungeAlerts = {}, setLo
 
 function LoungeInsightsDashboard() {
   const busiestAirportsData = [
-    { code: "ATL", name: "Hartsfield-Jackson Atlanta", peakWait: 55, avgWait: 32, loungeCount: 1, popularity: 98, color: "from-rose-500 to-red-650" },
-    { code: "SFO", name: "San Francisco International", peakWait: 45, avgWait: 26, loungeCount: 1, popularity: 92, color: "from-orange-500 to-amber-650" },
-    { code: "DFW", name: "Dallas-Fort Worth International", peakWait: 40, avgWait: 22, loungeCount: 1, popularity: 87, color: "from-amber-500 to-yellow-650" },
-    { code: "LAS", name: "Harry Reid International", peakWait: 35, avgWait: 18, loungeCount: 2, popularity: 85, color: "from-yellow-500 to-lime-650" },
-    { code: "SEA", name: "Seattle-Tacoma International", peakWait: 30, avgWait: 15, loungeCount: 2, popularity: 78, color: "from-indigo-500 to-blue-650" },
+    { code: "ATL", name: "Hartsfield-Jackson Atlanta", peakWait: 55, avgWait: 32, loungeCount: 1, popularity: 98, color: "from-rose-500 to-red-700" },
+    { code: "SFO", name: "San Francisco International", peakWait: 45, avgWait: 26, loungeCount: 1, popularity: 92, color: "from-orange-500 to-amber-700" },
+    { code: "DFW", name: "Dallas-Fort Worth International", peakWait: 40, avgWait: 22, loungeCount: 1, popularity: 87, color: "from-amber-500 to-yellow-600" },
+    { code: "LAS", name: "Harry Reid International", peakWait: 35, avgWait: 18, loungeCount: 2, popularity: 85, color: "from-yellow-500 to-lime-600" },
+    { code: "SEA", name: "Seattle-Tacoma International", peakWait: 30, avgWait: 15, loungeCount: 2, popularity: 78, color: "from-indigo-500 to-blue-700" },
   ];
 
   const hourlyCrowdData = [
@@ -1672,19 +1672,12 @@ function LoungeInsightsDashboard() {
             style={{ touchAction: "pan-x", WebkitOverflowScrolling: "touch" }}
           >
             <div className="min-w-[480px]">
-              <div className="h-56 flex items-end justify-between gap-1.5 sm:gap-2 pt-4 border-b border-zinc-200 dark:border-zinc-800 pb-2">
+              <div className="h-56 flex items-end justify-between gap-1.5 sm:gap-2 pt-12 border-b border-zinc-200 dark:border-zinc-800 pb-2">
                 {hourlyCrowdData.map((item, idx) => {
                   const maxWait = 45;
                   const percent = (item.wait / maxWait) * 100;
                   return (
                     <div key={idx} className="flex-1 flex flex-col items-center group h-full justify-end relative">
-                      {/* Tooltip on hover */}
-                      <div className="absolute mb-48 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom bg-zinc-900 dark:bg-zinc-800 text-white dark:text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg z-20 pointer-events-none text-center min-w-[70px]">
-                        <span className="block">{item.hour}</span>
-                        <span className="block text-indigo-400 dark:text-indigo-300">{item.wait}m wait</span>
-                        <span className="block opacity-75 text-[8px]">{item.density}</span>
-                      </div>
-                      
                       {/* Visual Bar */}
                       <div 
                         style={{ height: `${percent}%` }}
@@ -1700,6 +1693,13 @@ function LoungeInsightsDashboard() {
                         {item.density === "Peak" && (
                           <span className="absolute top-0 inset-x-0 h-0.5 bg-white/40 rounded-t-md"></span>
                         )}
+
+                        {/* Tooltip on hover (positioned bottom-full relative to visual bar top, centered with translate) */}
+                        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 scale-0 group-hover:scale-100 transition-all duration-150 bg-zinc-900 dark:bg-zinc-800 text-white dark:text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg z-20 pointer-events-none text-center min-w-[70px]">
+                          <span className="block">{item.hour}</span>
+                          <span className="block text-indigo-400 dark:text-indigo-300 font-extrabold">{item.wait}m wait</span>
+                          <span className="block opacity-75 text-[8px]">{item.density}</span>
+                        </div>
                       </div>
                     </div>
                   );
