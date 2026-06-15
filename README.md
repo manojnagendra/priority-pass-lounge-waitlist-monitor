@@ -19,13 +19,13 @@ A premium, responsive Next.js application that helps Priority Pass members track
   * ⚪ **Lounge Closed**: Lounge is outside operational hours.
 * **Remote Check-In Integration**: Direct links to open location check-ins and join queues from the browser.
 
-### 2. Scraper Resilience & Timezone Fallbacks
-* **Concurrency Protection**: The home screen launches simultaneous fetches. To prevent Waitwhile from rate-limiting or blocking requests, the `/api/status` endpoint uses a 60-second cache.
-* **Offline Hour Calculations**: If a scrape fails due to timeout or block, the endpoint dynamically evaluates current timezone-aligned hours to serve estimated states (`GREEN` or `CLOSED`) along with a `⚠️ Live Offline` badge in the UI.
+### 2. API Resilience & Timezone Fallbacks
+* **Concurrency Protection**: The home screen launches simultaneous fetches. To prevent rate-limiting, the `/api/status` endpoint uses a 60-second cache.
+* **Offline Hour Calculations**: If a connection fails, the endpoint dynamically evaluates current timezone-aligned hours to serve estimated states (`GREEN` or `CLOSED`) along with a `⚠️ Live Offline` badge in the UI.
 
 ### 3. Layover Trip Lounge Planner
 * **Multi-Leg Routing**: Enter your starting airport, dates, layover targets, and final destinations.
-* **Sequential Flight Resolution**: Automatically fetches active flight details (gates, terminals, status, departure hours) for each leg using FlightAware.
+* **Sequential Flight Resolution**: Automatically fetches active flight details (gates, terminals, status, departure hours) for each leg.
 * **Timeline Visualization**: Renders a travel timeline displaying lounges at each layover airport and flight connection details.
 
 ### 4. Interactive Walk Guide & Gate Calculator
@@ -49,7 +49,7 @@ A premium, responsive Next.js application that helps Priority Pass members track
 
 ## 🔌 API Endpoints
 
-### 1. Waitlist Status Scraper (`/api/status`)
+### 1. Waitlist Status (`/api/status`)
 * **Endpoint**: `/api/status?slug={lounge-slug}`
 
 ### 2. Live Flight Gate Resolver (`/api/flight`)
