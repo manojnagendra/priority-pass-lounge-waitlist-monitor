@@ -1,0 +1,1409 @@
+[
+  {
+    "code": "ATL",
+    "name": "The Club ATL",
+    "city": "Atlanta",
+    "terminal": "International Terminal (Concourse F)",
+    "slug": "the-club-atl",
+    "open_time": "06:00",
+    "close_time": "22:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse F, Mezzanine Level, next to Gate F3.",
+    "menu_highlights": [
+      "Southern hot buffet featuring local comfort foods",
+      "Georgia peach signature cocktails",
+      "Local Atlanta craft beers & wines"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "BOS",
+    "name": "The Club BOS",
+    "city": "Boston",
+    "terminal": "Terminal C (Gate C19)",
+    "slug": "the-club-bos",
+    "open_time": "06:00",
+    "close_time": "22:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Terminal C, upper level near Gate C19.",
+    "menu_highlights": [
+      "New England clam chowder",
+      "Boston craft beers & cider",
+      "Artisan cheese selection & fresh fruit"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "BUF",
+    "name": "The Club BUF",
+    "city": "Buffalo",
+    "terminal": "Main Terminal (Gate 4)",
+    "slug": "the-club-buf",
+    "open_time": "04:00",
+    "close_time": "19:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Main Terminal, near Gate 4.",
+    "menu_highlights": [
+      "Buffalo chicken sliders & wraps",
+      "Finger Lakes regional wines",
+      "Seasonal hot soups & snack mixes"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "BWI",
+    "name": "The Club BWI",
+    "city": "Baltimore",
+    "terminal": "Concourse D (Gate D10)",
+    "slug": "the-club-bwi",
+    "open_time": "04:15",
+    "close_time": "22:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse D, upper level near Gate D10.",
+    "menu_highlights": [
+      "Maryland crab soup",
+      "Local Baltimore IPAs & craft beers",
+      "Freshly prepared wraps & seasonal salads"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "CHS",
+    "name": "The Club CHS",
+    "city": "Charleston",
+    "terminal": "Concourse B (Gate B5)",
+    "slug": "the-club-chs",
+    "open_time": "04:10",
+    "close_time": "20:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse B, near Gate B5.",
+    "menu_highlights": [
+      "Lowcountry stone-ground grits",
+      "Southern sweet tea cocktails",
+      "Artisanal cold cuts & sandwiches"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "CLE",
+    "name": "The Club CLE",
+    "city": "Cleveland",
+    "terminal": "Concourse C (Gate C2)",
+    "slug": "the-club-cle",
+    "open_time": "04:30",
+    "close_time": "21:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse C, near Gate C2.",
+    "menu_highlights": [
+      "Great Lakes Brewing beers",
+      "Hot soup & chili bar",
+      "Fresh fruit & snack basket"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "CLT",
+    "name": "The Club CLT",
+    "city": "Charlotte",
+    "terminal": "Concourse A (Gate A21)",
+    "slug": "the-club-clt",
+    "open_time": "05:00",
+    "close_time": "21:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse A, near Gate A21.",
+    "menu_highlights": [
+      "North Carolina style pulled pork",
+      "Local Charlotte craft beers on tap",
+      "Seasonal hot buffet with sides"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "CVG",
+    "name": "The Club CVG",
+    "city": "Cincinnati",
+    "terminal": "Concourse A (Gate A8/A10)",
+    "slug": "the-club-cvg",
+    "open_time": "05:00",
+    "close_time": "21:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse A, near Gate A8/A10.",
+    "menu_highlights": [
+      "Skyline-style chili dips & snacks",
+      "Cincinnati local craft beers",
+      "Fresh garden salads & cheese boards"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "DFW",
+    "name": "The Club DFW",
+    "city": "Dallas-Fort Worth",
+    "terminal": "Terminal D (Gate D27)",
+    "slug": "the-club-dfw",
+    "open_time": "04:00",
+    "close_time": "22:30",
+    "timezone": "America/Chicago",
+    "directions": "Airside - Terminal D, near Gate D27 on the mezzanine level.",
+    "menu_highlights": [
+      "Tex-Mex taco & fajita bar",
+      "Premium tequila margaritas",
+      "Texas Shiner Bock on tap"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "GRR",
+    "name": "The Club GRR",
+    "city": "Grand Rapids",
+    "terminal": "Concourse A (Gate A4)",
+    "slug": "the-club-grr",
+    "open_time": "05:00",
+    "close_time": "19:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse A, near Gate A4.",
+    "menu_highlights": [
+      "Michigan craft beers",
+      "Grand Rapids local snacks",
+      "Gourmet cheese, crackers, & charcuterie"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "IAD",
+    "name": "Turkish Airlines Lounge",
+    "city": "Washington D.C.",
+    "terminal": "Concourse B (Gate B43)",
+    "slug": "turkishloungeiad",
+    "open_time": "07:15",
+    "close_time": "21:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse B, near Gate B43.",
+    "menu_highlights": [
+      "Authentic Turkish meze buffet (hummus, tabouli, etc.)",
+      "Fresh baklava & seasonal desserts",
+      "Traditional Turkish coffee & tea station",
+      "Full bar with premium liquors & wines"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "LAS",
+    "name": "The Club LAS (Terminal 1)",
+    "city": "Las Vegas",
+    "terminal": "Terminal 1 (Concourse D)",
+    "slug": "the-club-las-t1",
+    "open_time": "05:00",
+    "close_time": "23:30",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal 1 (Concourse D), upper level near Gate D33.",
+    "menu_highlights": [
+      "Hot buffet featuring pasta & entrees",
+      "Nevada local craft beers",
+      "Premium cocktails & wines"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "LAS",
+    "name": "The Club LAS (Terminal 3)",
+    "city": "Las Vegas",
+    "terminal": "Terminal 3 (Concourse E)",
+    "slug": "the-club-las-t3",
+    "open_time": "05:00",
+    "close_time": "23:59",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal 3, near Gate E2.",
+    "menu_highlights": [
+      "Seasonal chef-curated hot plates",
+      "Gourmet gin & tonic bar",
+      "Fresh fruit, cheese, & dessert selection"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "MCO",
+    "name": "The Club MCO (Gates 1-29)",
+    "city": "Orlando",
+    "terminal": "Terminal A (Gates 1-29)",
+    "slug": "the-club-mco-a1",
+    "open_time": "05:00",
+    "close_time": "21:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Terminal A (Gates 1-29), near Gate 29.",
+    "menu_highlights": [
+      "Citrus-infused seasonal hot entrées",
+      "Florida tropical signature cocktails",
+      "Fresh pasta salads & desserts"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "MCO",
+    "name": "The Club MCO (Concourse 4)",
+    "city": "Orlando",
+    "terminal": "Terminal B (Concourse 4)",
+    "slug": "the-club-mco-a4",
+    "open_time": "05:00",
+    "close_time": "21:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Terminal B (Concourse 4), near Gate 91.",
+    "menu_highlights": [
+      "Florida key lime pie dessert bites",
+      "Orlando local craft beers on tap",
+      "Hot soup & artisan sandwich bar"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "MDW",
+    "name": "The Club MDW",
+    "city": "Chicago",
+    "terminal": "Concourse A (Gate A1)",
+    "slug": "the-club-mdw",
+    "open_time": "04:00",
+    "close_time": "22:00",
+    "timezone": "America/Chicago",
+    "directions": "Airside - Concourse A, near Gate A1.",
+    "menu_highlights": [
+      "Chicago-style hot dog bar",
+      "Midwest craft IPAs & beers",
+      "Hot vegetable soup & snack mix"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "MSY",
+    "name": "The Club MSY",
+    "city": "New Orleans",
+    "terminal": "Main Terminal (Gate A6)",
+    "slug": "the-club-msy",
+    "open_time": "04:00",
+    "close_time": "21:00",
+    "timezone": "America/Chicago",
+    "directions": "Airside - Main Terminal, near Gate A6.",
+    "menu_highlights": [
+      "Traditional Cajun chicken & sausage jambalaya",
+      "Abita craft beers on tap",
+      "Classic New Orleans Hurricane cocktails",
+      "Freshly dusted beignets"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "PIT",
+    "name": "The Club PIT",
+    "city": "Pittsburgh",
+    "terminal": "Concourse C (Gate C52)",
+    "slug": "the-club-pit",
+    "open_time": "04:30",
+    "close_time": "20:00",
+    "timezone": "America/New_York",
+    "directions": "Airside - Concourse C, near Gate C52.",
+    "menu_highlights": [
+      "Potato & cheese pierogies",
+      "Pennsylvania local craft IPAs",
+      "Freshly rolled wraps & hot soups"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SEA",
+    "name": "The Club SEA (Concourse A)",
+    "city": "Seattle",
+    "terminal": "Concourse A (Gate A11)",
+    "slug": "the-club-sea-a",
+    "open_time": "05:00",
+    "close_time": "00:30",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Concourse A, across from Gate A11.",
+    "menu_highlights": [
+      "Pacific Northwest salmon chowder",
+      "Washington State Cabernet & Chardonnay",
+      "Artisanal espresso bar with local beans"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SEA",
+    "name": "The Club SEA (Concourse S)",
+    "city": "Seattle",
+    "terminal": "Concourse S (Gate S9)",
+    "slug": "the-club-sea-s",
+    "open_time": "06:00",
+    "close_time": "01:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Concourse S, mezzanine level near Gate S9.",
+    "menu_highlights": [
+      "Seattle local craft beers & ciders",
+      "Seasonal hot chicken & rice buffet",
+      "Freshly brewed local coffees & snacks"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SFO",
+    "name": "The Club SFO",
+    "city": "San Francisco",
+    "terminal": "Terminal 1 (Near Gate B4)",
+    "slug": "the-club-sfo",
+    "open_time": "04:30",
+    "close_time": "23:30",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal 1 (Harvey Milk), Mezzanine level, near Gate B4.",
+    "menu_highlights": [
+      "California redwood-themed craft cocktails",
+      "Napa Valley Cabernet Sauvignon & Chardonnay",
+      "Organic locally-sourced hot buffet dishes",
+      "San Francisco sourdough & local cheeses"
+    ],
+    "amenities": {
+      "showers": "premium",
+      "kids_play_area": true,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SJC",
+    "name": "The Club SJC (Gate A15)",
+    "city": "San Jose",
+    "terminal": "Terminal A (Gate A15)",
+    "slug": "the-club-sjc-a15",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal A, near Gate A15.",
+    "menu_highlights": [
+      "Silicon Valley craft IPAs & local beers",
+      "Gourmet hot pressed paninis",
+      "Fresh organic greens & seasonal salads"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SJC",
+    "name": "The Club SJC (Gate A8)",
+    "city": "San Jose",
+    "terminal": "Terminal A (Gate A8)",
+    "slug": "the-club-sjc-a8",
+    "open_time": "05:00",
+    "close_time": "12:30",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal A, near Gate A8.",
+    "menu_highlights": [
+      "Hot minestrone soup station",
+      "Full-service cocktail bar",
+      "Fresh fruit, snacks & sweets"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "LIM",
+    "name": "The Club LIM",
+    "city": "Lima",
+    "terminal": "International Terminal",
+    "slug": "lim-the-club-international-airside",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "America/Lima",
+    "directions": "Airside - International Terminal, Jorge Chávez International Airport.",
+    "menu_highlights": [
+      "Peruvian ceviche & pisco sour cocktails",
+      "Fresh empanadas & local pastries",
+      "Peruvian single-origin coffee"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "south-america"
+  },
+  {
+    "code": "HKG",
+    "name": "Kyra Lounge",
+    "city": "Hong Kong",
+    "terminal": "Terminal 1",
+    "slug": "hkg-kyra-lounge-terminal-1",
+    "open_time": "05:30",
+    "close_time": "23:30",
+    "timezone": "Asia/Hong_Kong",
+    "directions": "Airside - Terminal 1, Level 6, near Gate 23, Hong Kong International Airport.",
+    "menu_highlights": [
+      "Dim sum & Hong Kong-style milk tea",
+      "Roasted meats & fresh noodle bar",
+      "Premium crafted cocktails & craft beer"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "asia"
+  },
+  {
+    "code": "LGW",
+    "name": "Club Aspire South Terminal",
+    "city": "London",
+    "terminal": "South Terminal",
+    "slug": "lgw-club-aspire-south-terminal",
+    "open_time": "05:00",
+    "close_time": "21:00",
+    "timezone": "Europe/London",
+    "directions": "Airside - South Terminal, upper level lounge pavilion, London Gatwick Airport.",
+    "menu_highlights": [
+      "Traditional English breakfast items",
+      "British craft beers & cider",
+      "Freshly baked scones & clotted cream"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "LHR",
+    "name": "Club Aspire Terminal 5",
+    "city": "London",
+    "terminal": "Terminal 5",
+    "slug": "lhr-club-aspire-terminal-5",
+    "open_time": "05:00",
+    "close_time": "21:00",
+    "timezone": "Europe/London",
+    "directions": "Airside - Terminal 5, Concourse A, Gate A18, London Heathrow Airport.",
+    "menu_highlights": [
+      "English afternoon tea selection",
+      "London dry gin & tonic bar",
+      "Hot seasonal British buffet selection"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "ANC",
+    "name": "Alaska Lounge",
+    "city": "Anchorage",
+    "terminal": "South Terminal (Concourse C)",
+    "slug": "alaskaloungeanc",
+    "open_time": "05:00",
+    "close_time": "01:00",
+    "timezone": "America/Anchorage",
+    "directions": "Airside - South Terminal, Concourse C, near Gate C1.",
+    "menu_highlights": [
+      "Bar serving local Alaskan craft beers & wines",
+      "Fresh local pastries, snacks & custom pancakes",
+      "Premium espresso beverage station"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "LAX",
+    "name": "Alaska Lounge",
+    "city": "Los Angeles",
+    "terminal": "Terminal 6 (Mezzanine Level)",
+    "slug": "alaskaloungelax",
+    "open_time": "05:00",
+    "close_time": "23:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Terminal 6, mezzanine level, near Gate 64.",
+    "menu_highlights": [
+      "West Coast craft beers, wines & spirits",
+      "Fresh pancake maker & warm breakfast items",
+      "Artisan salads, fresh fruit & local snacks"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "PDX",
+    "name": "Alaska Lounge",
+    "city": "Portland",
+    "terminal": "South Hall (Mezzanine Level)",
+    "slug": "alaskaloungepdx",
+    "open_time": "04:30",
+    "close_time": "22:30",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Mezzanine Level, South Hall (just past South Security Checkpoint, serving Concourses B & C).",
+    "menu_highlights": [
+      "Signature barista coffee station",
+      "Oregon Pinot Noir & local Portland craft brews",
+      "Warm soups, fresh salads, and custom pancakes"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SEA",
+    "name": "Alaska Lounge (Concourse C)",
+    "city": "Seattle",
+    "terminal": "Concourse C (Mezzanine Level)",
+    "slug": "seac1",
+    "open_time": "05:00",
+    "close_time": "19:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Concourse C, mezzanine level, next to Gate C16.",
+    "menu_highlights": [
+      "Seattle local espresso drinks & custom coffee",
+      "Pacific Northwest craft beers & fine wines",
+      "Freshly baked cookies, snacks & warm soups"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SEA",
+    "name": "Alaska Lounge (Concourse D)",
+    "city": "Seattle",
+    "terminal": "Concourse D",
+    "slug": "sead1",
+    "open_time": "05:00",
+    "close_time": "23:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - Concourse D, upper level, just beyond Security Checkpoint 4.",
+    "menu_highlights": [
+      "PNW craft IPAs & local Washington wines",
+      "Pancake machine & custom breakfast options",
+      "Fresh seasonal salads, fruits & snacks"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "SEA",
+    "name": "Alaska Lounge (Concourse N)",
+    "city": "Seattle",
+    "terminal": "Concourse N (North Satellite)",
+    "slug": "sean13",
+    "open_time": "05:00",
+    "close_time": "23:00",
+    "timezone": "America/Los_Angeles",
+    "directions": "Airside - North Satellite, mezzanine level, above Gates N13-N18.",
+    "menu_highlights": [
+      "Flagship lounge bar with premium drinks",
+      "Barista-crafted espresso beverage station",
+      "Hot dishes, local chowder & seasonal buffet"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "JFK",
+    "name": "Alaska Lounge",
+    "city": "New York",
+    "terminal": "Terminal 7 (Mezzanine Level)",
+    "slug": "alaskaloungejfk",
+    "open_time": "05:00",
+    "close_time": "19:30",
+    "timezone": "America/New_York",
+    "directions": "Airside - Terminal 7, mezzanine level, just above security checkpoint.",
+    "menu_highlights": [
+      "New York local craft beers & wines",
+      "Freshly baked cookies & morning pastries",
+      "Warm soups, fresh salads, and snack plates"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "YYZ",
+    "name": "Plaza Premium Lounge (T1 Domestic)",
+    "city": "Toronto",
+    "terminal": "Terminal 1 (Gate D20)",
+    "slug": "plaza-premium-yyz-t1",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "America/Toronto",
+    "directions": "Terminal 1, airside, Level 3, near Gate D20.",
+    "menu_highlights": [
+      "Fresh Canadian maple treats",
+      "Ontario craft beers & wines",
+      "Hot breakfast buffet"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "YYZ",
+    "name": "Plaza Premium Lounge (T3 International)",
+    "city": "Toronto",
+    "terminal": "Terminal 3 (Gate C32)",
+    "slug": "plaza-premium-yyz-t3",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "America/Toronto",
+    "directions": "Terminal 3, airside, past security, near Gate C32.",
+    "menu_highlights": [
+      "Artisanal Canadian cheeses",
+      "Local Canadian beers & wines",
+      "International hot buffet"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "YVR",
+    "name": "Plaza Premium Lounge (Domestic)",
+    "city": "Vancouver",
+    "terminal": "Domestic Terminal (Gate B15)",
+    "slug": "plaza-premium-yvr-dom",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "America/Vancouver",
+    "directions": "Domestic Terminal, airside, Gate B15.",
+    "menu_highlights": [
+      "BC craft beers & wines",
+      "Fresh local pastries",
+      "Hot soup and salad station"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "YUL",
+    "name": "National Bank Lounge",
+    "city": "Montreal",
+    "terminal": "International Terminal (Gate 53)",
+    "slug": "yul-national-bank-lounge",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "America/Toronto",
+    "directions": "International Terminal, airside, near Gate 53.",
+    "menu_highlights": [
+      "Quebec maple desserts",
+      "Local beers & premium wines",
+      "Hot seasonal dishes"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "north-america"
+  },
+  {
+    "code": "LHR",
+    "name": "No1 Lounge (Terminal 3)",
+    "city": "London",
+    "terminal": "Terminal 3 (Lounge Zone F)",
+    "slug": "no1-lounge-lhr-t3",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "Europe/London",
+    "directions": "Terminal 3, Airside, Lounge Zone F, near Gate 14.",
+    "menu_highlights": [
+      "Traditional English tea selection",
+      "London dry gins & local ales",
+      "Hot British buffet"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "LHR",
+    "name": "Plaza Premium Lounge (Terminal 4)",
+    "city": "London",
+    "terminal": "Terminal 4 (Level 2)",
+    "slug": "plaza-premium-lhr-t4",
+    "open_time": "05:00",
+    "close_time": "22:00",
+    "timezone": "Europe/London",
+    "directions": "Terminal 4, Airside, Level 2, near Gate 1a.",
+    "menu_highlights": [
+      "British craft ciders & beers",
+      "Warm seasonal soups & sides",
+      "Full espresso coffee station"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "LGW",
+    "name": "No1 Lounge (North Terminal)",
+    "city": "London",
+    "terminal": "North Terminal",
+    "slug": "no1-lounge-lgw-north",
+    "open_time": "04:00",
+    "close_time": "22:00",
+    "timezone": "Europe/London",
+    "directions": "North Terminal, Airside, Lounge Pavilion.",
+    "menu_highlights": [
+      "Traditional English breakfast",
+      "London craft beers & wines",
+      "Fresh scones & cream"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "LGW",
+    "name": "No1 Lounge (South Terminal)",
+    "city": "London",
+    "terminal": "South Terminal",
+    "slug": "no1-lounge-lgw-south",
+    "open_time": "04:00",
+    "close_time": "22:00",
+    "timezone": "Europe/London",
+    "directions": "South Terminal, Airside, upper level Lounge Pavilion.",
+    "menu_highlights": [
+      "English morning pasties",
+      "Gatwick specialty signature cocktails",
+      "Fresh hot soup and bread bar"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "BHX",
+    "name": "No1 Lounge (Terminal 1)",
+    "city": "Birmingham",
+    "terminal": "Terminal 1",
+    "slug": "no1-lounge-bhx",
+    "open_time": "04:30",
+    "close_time": "20:30",
+    "timezone": "Europe/London",
+    "directions": "Main Terminal, Airside, near Gates 1-20.",
+    "menu_highlights": [
+      "Premium spirits & gin bar",
+      "Freshly baked morning goods",
+      "Hot and cold snacks selection"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "europe"
+  },
+  {
+    "code": "EDI",
+    "name": "No1 Lounge",
+    "city": "Edinburgh",
+    "terminal": "Main Terminal",
+    "slug": "no1-lounge-edi",
+    "open_time": "04:30",
+    "close_time": "21:00",
+    "timezone": "Europe/London",
+    "directions": "Main Terminal, Airside, near Gates 10-14.",
+    "menu_highlights": [
+      "Scotch whisky tasting selection",
+      "Traditional Scottish breakfast dishes",
+      "Fresh pastries & local tea"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": true,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "FRA",
+    "name": "LUXX Lounge",
+    "city": "Frankfurt",
+    "terminal": "Terminal 1 (Public Area)",
+    "slug": "luxx-lounge-fra",
+    "open_time": "06:00",
+    "close_time": "21:30",
+    "timezone": "Europe/Berlin",
+    "directions": "Terminal 1, public area, between Concourse B and C, Section 3.",
+    "menu_highlights": [
+      "German draft beers & wines",
+      "Frankfurter sausages & pretzels",
+      "Seasonal hot soups"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "europe"
+  },
+  {
+    "code": "FRA",
+    "name": "Primeclass Lounge",
+    "city": "Frankfurt",
+    "terminal": "Terminal 2 (Concourse E)",
+    "slug": "primeclass-lounge-fra",
+    "open_time": "06:00",
+    "close_time": "22:00",
+    "timezone": "Europe/Berlin",
+    "directions": "Terminal 2, Airside, Concourse E, near Gate E9.",
+    "menu_highlights": [
+      "German beer & wine selection",
+      "Hot buffet featuring European dishes",
+      "Assorted pastries & salads"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "MUC",
+    "name": "Airport Lounge World",
+    "city": "Munich",
+    "terminal": "Terminal 1 (Concourse B)",
+    "slug": "airport-lounge-world-muc",
+    "open_time": "06:00",
+    "close_time": "21:00",
+    "timezone": "Europe/Berlin",
+    "directions": "Terminal 1, Airside, Concourse B, Level 6.",
+    "menu_highlights": [
+      "Bavarian beers & local wines",
+      "Warm pretzels & sweet mustard",
+      "Hot seasonal German buffet"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "CDG",
+    "name": "YotelAir Lounge",
+    "city": "Paris",
+    "terminal": "Terminal 2E",
+    "slug": "yotelair-lounge-cdg",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Europe/Paris",
+    "directions": "Terminal 2E, transit area (Instant Paris), Gates K.",
+    "menu_highlights": [
+      "Fresh French croissants & pastries",
+      "Hot coffee & espresso drinks",
+      "Snacks & soft drinks"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": true,
+      "wifi": "high-speed",
+      "food_drinks": "cold-snacks",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "europe"
+  },
+  {
+    "code": "AMS",
+    "name": "Aspire Lounge 26 (Schengen)",
+    "city": "Amsterdam",
+    "terminal": "Departure Hall 1 (Upper Level)",
+    "slug": "aspire-lounge-ams-26",
+    "open_time": "05:30",
+    "close_time": "21:30",
+    "timezone": "Europe/Amsterdam",
+    "directions": "Lounge 1, Schengen Area, upper level near Gate D.",
+    "menu_highlights": [
+      "Dutch cheeses & local beers",
+      "Fresh hot soup and bread bar",
+      "Assorted cold salads & fruits"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "AMS",
+    "name": "Aspire Lounge 41 (Non-Schengen)",
+    "city": "Amsterdam",
+    "terminal": "Departure Hall 3 (Upper Level)",
+    "slug": "aspire-lounge-ams-41",
+    "open_time": "05:30",
+    "close_time": "21:30",
+    "timezone": "Europe/Amsterdam",
+    "directions": "Lounge 3, Non-Schengen Area, upper level near Gate E.",
+    "menu_highlights": [
+      "Dutch craft beers & gin",
+      "Warm seasonal entrees & soup",
+      "Fresh fruit and bakery selection"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "ZRH",
+    "name": "Aspire Lounge",
+    "city": "Zurich",
+    "terminal": "Airside (Gate A/B)",
+    "slug": "aspire-lounge-zrh",
+    "open_time": "05:30",
+    "close_time": "21:00",
+    "timezone": "Europe/Zurich",
+    "directions": "Airside, Center Bar, upper level, near Gates A/B.",
+    "menu_highlights": [
+      "Swiss chocolate treats",
+      "Local Swiss wines & beers",
+      "Assorted hot & cold buffet"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "FCO",
+    "name": "Plaza Premium Lounge",
+    "city": "Rome",
+    "terminal": "Terminal 3 (Area E)",
+    "slug": "plaza-premium-fco",
+    "open_time": "05:30",
+    "close_time": "21:30",
+    "timezone": "Europe/Rome",
+    "directions": "Terminal 3, Airside, upper level, Area E.",
+    "menu_highlights": [
+      "Authentic Italian pasta & pizza",
+      "Italian wines & espresso bar",
+      "Fresh salads & pastries"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "europe"
+  },
+  {
+    "code": "SYD",
+    "name": "Plaza Premium Lounge",
+    "city": "Sydney",
+    "terminal": "Terminal 1 (Gate 24)",
+    "slug": "plaza-premium-syd-t1",
+    "open_time": "06:00",
+    "close_time": "22:00",
+    "timezone": "Australia/Sydney",
+    "directions": "Terminal 1 (International), Airside, near Gate 24.",
+    "menu_highlights": [
+      "Australian craft beers & wines",
+      "Freshly prepared noodle station",
+      "Seasonal hot buffet dishes"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "oceania"
+  },
+  {
+    "code": "MEL",
+    "name": "Plaza Premium Lounge",
+    "city": "Melbourne",
+    "terminal": "Terminal 2 (Gate 9)",
+    "slug": "plaza-premium-mel-t2",
+    "open_time": "06:00",
+    "close_time": "23:00",
+    "timezone": "Australia/Melbourne",
+    "directions": "Terminal 2 (International), Airside, near Gate 9.",
+    "menu_highlights": [
+      "Australian local wines & brews",
+      "Hot breakfast & evening buffet",
+      "Gourmet espresso bar"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": true
+    },
+    "region": "oceania"
+  }
+]
