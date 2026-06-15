@@ -1,11 +1,6 @@
-# priority-pass-lounge-waitlist-monitor
-Independent live Priority Pass lounge queue monitor
-
----
-
 # Priority Pass Lounge Waitlist Tracker & Layover Companion
 
-A premium, responsive Next.js application that helps Priority Pass members track lounge queues, estimate walk times to departure gates, plan layover lounge stops, and view historical crowd trends.
+A premium, responsive Next.js application that helps Priority Pass members track lounge queues, join waitlist, estimate walk times to departure gates, plan layover lounge stops, and view historical crowd trends.
 
 ---
 
