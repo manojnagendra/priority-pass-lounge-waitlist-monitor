@@ -1656,7 +1656,7 @@ function LoungeInsightsDashboard() {
       {/* Main Charts Row */}
       <div className="grid gap-6 lg:grid-cols-12">
         {/* Hourly Crowd Heatmap */}
-        <div className="lg:col-span-7 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
+        <div className="lg:col-span-7 min-w-0 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">⏰ Hourly Crowd Density (Daily Average)</h3>
@@ -1733,23 +1733,23 @@ function LoungeInsightsDashboard() {
         </div>
 
         {/* Busiest Airports Ranking */}
-        <div className="lg:col-span-5 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
+        <div className="lg:col-span-5 min-w-0 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
           <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">📊 Busiest Lounge Hubs</h3>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6">Ranked by maximum wait times and daily queue frequency.</p>
           
           <div className="space-y-4">
             {busiestAirportsData.map((airport, idx) => (
               <div key={idx} className="space-y-1">
-                <div className="flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-2">
-                    <span className="font-extrabold text-indigo-600 dark:text-indigo-400 bg-indigo-500/5 px-2 py-0.5 rounded border border-indigo-500/10">
+                <div className="flex items-center justify-between text-xs gap-3">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-extrabold text-indigo-600 dark:text-indigo-400 bg-indigo-500/5 px-2 py-0.5 rounded border border-indigo-500/10 shrink-0">
                       {airport.code}
                     </span>
-                    <span className="font-semibold text-zinc-700 dark:text-zinc-300 truncate max-w-[150px] sm:max-w-xs">
+                    <span className="font-semibold text-zinc-700 dark:text-zinc-300 truncate max-w-[110px] min-[375px]:max-w-[150px] sm:max-w-xs">
                       {airport.name}
                     </span>
                   </div>
-                  <span className="font-extrabold text-zinc-800 dark:text-zinc-200">
+                  <span className="font-extrabold text-zinc-800 dark:text-zinc-200 shrink-0">
                     {airport.peakWait}m max
                   </span>
                 </div>
