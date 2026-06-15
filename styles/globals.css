@@ -50,3 +50,24 @@ html, body {
   max-width: 100%;
 }
 
+/* Custom scrollbar for horizontal containers */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 5px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(161, 161, 170, 0.1); /* zinc-400 opacity 10% */
+  border-radius: 9999px;
+}
+.dark .scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(63, 63, 70, 0.2); /* zinc-700 opacity 20% */
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4); /* indigo-500 opacity 40% */
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+

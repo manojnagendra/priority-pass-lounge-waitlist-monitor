@@ -1633,19 +1633,19 @@ function LoungeInsightsDashboard() {
     <div className="space-y-8 animate-fadeIn duration-200">
       {/* Overview Cards */}
       <div className="grid gap-6 sm:grid-cols-3">
-        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-5 backdrop-blur-sm shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-5 backdrop-blur-sm shadow-sm">
           <span className="block text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-550">Busiest Hub</span>
           <span className="mt-1.5 block text-2xl font-extrabold text-zinc-800 dark:text-white">ATL (Concourse F)</span>
           <p className="mt-1.5 text-xs text-zinc-500 dark:text-zinc-400">Avg waitlist queue length: 55+ minutes during peak bank hours.</p>
           <div className="absolute right-3 bottom-3 opacity-10 dark:opacity-20 text-rose-500 font-extrabold text-3xl select-none">🔥</div>
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-5 backdrop-blur-sm shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-5 backdrop-blur-sm shadow-sm">
           <span className="block text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-550">Best Time to Visit</span>
           <span className="mt-1.5 block text-2xl font-extrabold text-zinc-800 dark:text-white">1:00 PM - 3:00 PM</span>
           <p className="mt-1.5 text-xs text-zinc-500 dark:text-zinc-400">Mid-day lull between morning business banks and evening departures.</p>
           <div className="absolute right-3 bottom-3 opacity-10 dark:opacity-20 text-emerald-500 font-extrabold text-3xl select-none">✨</div>
         </div>
-        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-5 backdrop-blur-sm shadow-sm">
+        <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-5 backdrop-blur-sm shadow-sm">
           <span className="block text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-550">Peak Travel Waves</span>
           <span className="mt-1.5 block text-2xl font-extrabold text-zinc-800 dark:text-white">Mon 8 AM / Fri 5 PM</span>
           <p className="mt-1.5 text-xs text-zinc-500 dark:text-zinc-400">Heaviest crowds due to combining business commuters & weekend travelers.</p>
@@ -1656,11 +1656,21 @@ function LoungeInsightsDashboard() {
       {/* Main Charts Row */}
       <div className="grid gap-6 lg:grid-cols-12">
         {/* Hourly Crowd Heatmap */}
-        <div className="lg:col-span-7 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-6 backdrop-blur-md shadow-sm">
-          <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">⏰ Hourly Crowd Density (Daily Average)</h3>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6">Cross-lounge average queue times by hours of operation (local time).</p>
+        <div className="lg:col-span-7 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">⏰ Hourly Crowd Density (Daily Average)</h3>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400">Cross-lounge average queue times by hours of operation (local time).</p>
+            </div>
+            <span className="md:hidden text-[9px] font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-400/10 px-2.5 py-1 rounded-full animate-pulse flex items-center gap-1 shrink-0 select-none">
+              Swipe ➔
+            </span>
+          </div>
           
-          <div className="overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div 
+            className="overflow-x-auto scrollbar-thin pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+            style={{ touchAction: "pan-x", WebkitOverflowScrolling: "touch" }}
+          >
             <div className="min-w-[480px]">
               <div className="h-56 flex items-end justify-between gap-1.5 sm:gap-2 pt-4 border-b border-zinc-200 dark:border-zinc-800 pb-2">
                 {hourlyCrowdData.map((item, idx) => {
@@ -1723,7 +1733,7 @@ function LoungeInsightsDashboard() {
         </div>
 
         {/* Busiest Airports Ranking */}
-        <div className="lg:col-span-5 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-6 backdrop-blur-md shadow-sm">
+        <div className="lg:col-span-5 rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
           <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">📊 Busiest Lounge Hubs</h3>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6">Ranked by maximum wait times and daily queue frequency.</p>
           
@@ -1762,7 +1772,7 @@ function LoungeInsightsDashboard() {
       </div>
 
       {/* Travel Tips & Hacks Grid */}
-      <div className="rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-6 backdrop-blur-md shadow-sm">
+      <div className="rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm">
         <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">💡 Pro Tips: Bypassing Lounge Lines</h3>
         <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6">Savvy traveler tricks to maximize comfort and minimize wait times.</p>
         
@@ -1812,7 +1822,7 @@ function LoungeFaqPanel() {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* About Section */}
-      <section className="rounded-2xl border border-zinc-200/60 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-6 backdrop-blur-md shadow-sm dark:shadow-none">
+      <section className="rounded-2xl border border-zinc-200/60 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-4 sm:p-6 backdrop-blur-md shadow-sm dark:shadow-none">
         <h2 className="text-xl font-black text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
           <span>ℹ️</span> About Priority Pass LoungeQ
         </h2>
@@ -1845,7 +1855,7 @@ function LoungeFaqPanel() {
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full flex items-center justify-between text-left px-5 py-4 text-sm font-bold text-zinc-800 dark:text-zinc-200 cursor-pointer focus:outline-none transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
+                  className="w-full flex items-center justify-between text-left px-4 py-3.5 sm:px-5 sm:py-4 text-sm font-bold text-zinc-800 dark:text-zinc-200 cursor-pointer focus:outline-none transition-colors hover:bg-zinc-50 dark:hover:bg-zinc-900/50"
                 >
                   <span>{faq.q}</span>
                   <span className={`text-xs text-zinc-400 transform transition-transform duration-200 ${isOpen ? 'rotate-180 text-indigo-500' : ''}`}>
@@ -1857,7 +1867,7 @@ function LoungeFaqPanel() {
                     isOpen ? 'max-h-60 border-t border-zinc-200/40 dark:border-white/5' : 'max-h-0'
                   } overflow-hidden`}
                 >
-                  <p className="px-5 py-4 text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                  <p className="px-4 py-3.5 sm:px-5 sm:py-4 text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
                     {faq.a}
                   </p>
                 </div>
