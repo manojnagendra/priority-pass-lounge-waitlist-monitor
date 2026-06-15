@@ -2289,17 +2289,19 @@ export default function Home() {
     setFilterStatus("all");
     setFilterAmenity("all");
     setSortBy("iata");
+    setFilterRegion("north-america");
   };
 
-  const isFiltered = search !== "" || filterStatus !== "all" || filterAmenity !== "all" || sortBy !== "iata";
+  const isFiltered = search !== "" || filterStatus !== "all" || filterAmenity !== "all" || sortBy !== "iata" || filterRegion !== "north-america";
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
     if (filterStatus !== "all") count++;
     if (filterAmenity !== "all") count++;
     if (sortBy !== "iata") count++;
+    if (filterRegion !== "north-america") count++;
     return count;
-  }, [filterStatus, filterAmenity, sortBy]);
+  }, [filterStatus, filterAmenity, sortBy, filterRegion]);
 
   // Compute live global statistics
   const stats = useMemo(() => {
@@ -2467,7 +2469,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-8 pb-24 sm:px-6 lg:px-8 md:py-12">
         
         {/* Header Section (mobile row, tablet flex) */}
         <header className="relative mb-8 flex items-center justify-between gap-4 border-b border-zinc-200 dark:border-white/5 pb-6">
@@ -2593,49 +2595,57 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mb-6 flex gap-1 sm:gap-2 border-b border-zinc-200 dark:border-white/5 pb-0.5 overflow-x-auto scrollbar-none whitespace-nowrap scroll-smooth snap-x snap-mandatory">
+        <section className="hidden md:flex mb-6 gap-2 border-b border-zinc-200 dark:border-white/5 pb-0.5 overflow-x-auto scrollbar-none whitespace-nowrap scroll-smooth snap-x snap-mandatory">
           <button
             onClick={() => setActiveMode("search")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-2 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "search"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
             }`}
           >
-            <span>🔍</span>
+            <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
             <span>Search Lounges</span>
           </button>
           <button
             onClick={() => setActiveMode("planner")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-2 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "planner"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
             }`}
           >
-            <span>✈️</span>
+            <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
             <span>Layover Trip Planner</span>
           </button>
           <button
             onClick={() => setActiveMode("trends")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-2 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "trends"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
             }`}
           >
-            <span>📊</span>
+            <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2" />
+            </svg>
             <span>Crowd Insights & Trends</span>
           </button>
           <button
             onClick={() => setActiveMode("faq")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-2 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "faq"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
             }`}
           >
-            <span>❓</span>
+            <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <span>About & FAQ</span>
           </button>
         </section>
@@ -2644,8 +2654,8 @@ export default function Home() {
           <>
             {/* Filters and Search Bar Container (sticky top viewport with glassmorphism) */}
             <section className="sticky top-0 z-30 mb-8 -mx-4 px-4 py-3 md:mx-0 md:px-6 md:py-4 md:rounded-2xl border-b md:border border-zinc-200/50 dark:border-white/5 bg-slate-50/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-sm">
-              {/* Region Selector Pills */}
-              <div className="flex gap-2 overflow-x-auto pb-3 mb-3 border-b border-zinc-200/60 dark:border-white/5 scrollbar-none scroll-smooth">
+              {/* Region Selector Pills (Desktop Only) */}
+              <div className="hidden md:flex gap-2 overflow-x-auto pb-3 mb-3 border-b border-zinc-200/60 dark:border-white/5 scrollbar-none scroll-smooth">
                 {[
                   { id: "favorites", label: "Bookmarked", icon: "⭐" },
                   { id: "all", label: "All Regions", icon: "🌐" },
@@ -2724,7 +2734,26 @@ export default function Home() {
 
                 {/* Filter & Sort selectors: Collapsible on mobile, always visible on desktop (md:flex) */}
                 <div className={`${showMobileFilters ? "block" : "hidden"} md:block w-full md:w-auto shrink-0 transition-all duration-200`}>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:flex md:items-center md:gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-2 md:flex md:items-center md:gap-3">
+                    
+                    {/* Region Selector (Mobile Only) */}
+                    <div className="flex md:hidden items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
+                      <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Region:</label>
+                      <select
+                        value={filterRegion}
+                        onChange={(e) => setFilterRegion(e.target.value)}
+                        className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
+                      >
+                        <option value="favorites">⭐ Bookmarked</option>
+                        <option value="all">🌐 All Regions</option>
+                        <option value="north-america">🌎 North America</option>
+                        <option value="south-america">🏔️ South America</option>
+                        <option value="asia">🏮 Asia</option>
+                        <option value="europe">🏰 Europe</option>
+                        <option value="oceania">🦘 Oceania</option>
+                      </select>
+                    </div>
+
                     <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
                       <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Queue:</label>
                       <select
@@ -3107,6 +3136,68 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Priority Pass LoungeQ. All data fetched directly from public Waitwhile interfaces.</p>
           <p className="mt-1 font-semibold text-zinc-500 dark:text-zinc-600">Not affiliated with Priority Pass, Collinson Group, Chase, or any lounge operator. Built purely as a free traveler community utility.</p>
         </footer>
+      </div>
+
+      {/* Mobile Fixed Bottom Tab Bar Navigation */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 dark:bg-zinc-955/95 border-t border-zinc-200 dark:border-zinc-800 backdrop-blur-md shadow-[0_-4px_12px_rgba(0,0,0,0.05)] dark:shadow-[0_-4px_12px_rgba(0,0,0,0.2)]">
+        <div className="flex justify-around items-center py-2 px-2">
+          {[
+            {
+              id: "search",
+              label: "Search",
+              icon: (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              )
+            },
+            {
+              id: "planner",
+              label: "Planner",
+              icon: (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+              )
+            },
+            {
+              id: "trends",
+              label: "Trends",
+              icon: (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2" />
+                </svg>
+              )
+            },
+            {
+              id: "faq",
+              label: "FAQ",
+              icon: (
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )
+            }
+          ].map((tab) => {
+            const isActive = activeMode === tab.id;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveMode(tab.id)}
+                className={`flex flex-col items-center justify-center py-1 px-2.5 min-w-[64px] rounded-xl transition-all duration-200 cursor-pointer ${
+                  isActive
+                    ? "text-indigo-600 dark:text-indigo-400 font-extrabold bg-indigo-50/50 dark:bg-indigo-950/25"
+                    : "text-zinc-400 hover:text-zinc-650 dark:text-zinc-500 dark:hover:text-zinc-300 font-semibold"
+                }`}
+              >
+                <div className={`transition-transform duration-200 ${isActive ? "scale-110" : ""}`}>
+                  {tab.icon}
+                </div>
+                <span className="text-[10px] tracking-wide mt-0.5">{tab.label}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Lounge Details Drawer / Bottom Sheet */}
