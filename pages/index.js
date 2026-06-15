@@ -111,10 +111,10 @@ function StatusCard({ lounge, refreshTrigger, onStatusLoaded, isFavorite, onTogg
               {lounge.code}
             </span>
             <div className="flex flex-col min-w-0 leading-none gap-1">
-              <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 truncate max-w-[120px] sm:max-w-[150px]">
+              <span className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 truncate max-w-[110px] sm:max-w-[180px]">
                 {lounge.city}
               </span>
-              <span className="text-[10px] text-zinc-500 dark:text-zinc-400 truncate max-w-[120px] sm:max-w-[150px]">
+              <span className="text-[10px] text-zinc-500 dark:text-zinc-400 truncate max-w-[110px] sm:max-w-[180px]">
                 {lounge.terminal}
               </span>
             </div>
@@ -166,7 +166,7 @@ function StatusCard({ lounge, refreshTrigger, onStatusLoaded, isFavorite, onTogg
 
         {/* Lounge Name & Pinned Indicator */}
         <div className="mt-4 flex items-start gap-2 justify-between">
-          <h2 className="text-xl font-bold tracking-tight text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors duration-200">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors duration-200">
             {lounge.name}
           </h2>
           {isFavorite && (
@@ -1660,48 +1660,52 @@ function LoungeInsightsDashboard() {
           <h3 className="text-base font-bold text-zinc-900 dark:text-white mb-1">⏰ Hourly Crowd Density (Daily Average)</h3>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6">Cross-lounge average queue times by hours of operation (local time).</p>
           
-          <div className="h-56 flex items-end justify-between gap-1.5 sm:gap-2.5 pt-4 border-b border-zinc-200 dark:border-zinc-800 pb-2">
-            {hourlyCrowdData.map((item, idx) => {
-              const maxWait = 45;
-              const percent = (item.wait / maxWait) * 100;
-              return (
-                <div key={idx} className="flex-1 flex flex-col items-center group h-full justify-end relative">
-                  {/* Tooltip on hover */}
-                  <div className="absolute mb-48 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom bg-zinc-900 dark:bg-zinc-800 text-white dark:text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg z-20 pointer-events-none text-center min-w-[70px]">
-                    <span className="block">{item.hour}</span>
-                    <span className="block text-indigo-400 dark:text-indigo-300">{item.wait}m wait</span>
-                    <span className="block opacity-75 text-[8px]">{item.density}</span>
-                  </div>
-                  
-                  {/* Visual Bar */}
-                  <div 
-                    style={{ height: `${percent}%` }}
-                    className={`w-full rounded-t-md transition-all duration-355 group-hover:opacity-90 relative ${
-                      item.density === "Peak" 
-                        ? "bg-rose-500/80 group-hover:bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.1)]" 
-                        : item.density === "High"
-                        ? "bg-amber-500/80 group-hover:bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.1)]"
-                        : "bg-emerald-500/80 group-hover:bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.1)]"
-                    }`}
-                  >
-                    {/* Glowing indicator inside peak bars */}
-                    {item.density === "Peak" && (
-                      <span className="absolute top-0 inset-x-0 h-0.5 bg-white/40 rounded-t-md"></span>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          
-          {/* X-Axis Labels */}
-          <div className="flex justify-between text-[9px] font-bold text-zinc-400 dark:text-zinc-500 mt-2 px-1">
-            <span>5 AM</span>
-            <span>9 AM</span>
-            <span>1 PM</span>
-            <span>5 PM</span>
-            <span>9 PM</span>
-            <span>10 PM</span>
+          <div className="overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="min-w-[480px]">
+              <div className="h-56 flex items-end justify-between gap-1.5 sm:gap-2 pt-4 border-b border-zinc-200 dark:border-zinc-800 pb-2">
+                {hourlyCrowdData.map((item, idx) => {
+                  const maxWait = 45;
+                  const percent = (item.wait / maxWait) * 100;
+                  return (
+                    <div key={idx} className="flex-1 flex flex-col items-center group h-full justify-end relative">
+                      {/* Tooltip on hover */}
+                      <div className="absolute mb-48 scale-0 group-hover:scale-100 transition-all duration-150 origin-bottom bg-zinc-900 dark:bg-zinc-800 text-white dark:text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg z-20 pointer-events-none text-center min-w-[70px]">
+                        <span className="block">{item.hour}</span>
+                        <span className="block text-indigo-400 dark:text-indigo-300">{item.wait}m wait</span>
+                        <span className="block opacity-75 text-[8px]">{item.density}</span>
+                      </div>
+                      
+                      {/* Visual Bar */}
+                      <div 
+                        style={{ height: `${percent}%` }}
+                        className={`w-full rounded-t-md transition-all duration-300 group-hover:opacity-90 relative ${
+                          item.density === "Peak" 
+                            ? "bg-rose-500/80 group-hover:bg-rose-500 shadow-[0_0_10px_rgba(244,63,94,0.1)]" 
+                            : item.density === "High"
+                            ? "bg-amber-500/80 group-hover:bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.1)]"
+                            : "bg-emerald-500/80 group-hover:bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.1)]"
+                        }`}
+                      >
+                        {/* Glowing indicator inside peak bars */}
+                        {item.density === "Peak" && (
+                          <span className="absolute top-0 inset-x-0 h-0.5 bg-white/40 rounded-t-md"></span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              
+              {/* X-Axis Labels */}
+              <div className="flex justify-between text-[9px] font-bold text-zinc-400 dark:text-zinc-500 mt-2 px-1">
+                <span>5 AM</span>
+                <span>9 AM</span>
+                <span>1 PM</span>
+                <span>5 PM</span>
+                <span>9 PM</span>
+                <span>10 PM</span>
+              </div>
+            </div>
           </div>
 
           {/* Color Legend */}
@@ -1883,6 +1887,7 @@ export default function Home() {
   const [loungeAlerts, setLoungeAlerts] = useState({});
   const [sortBy, setSortBy] = useState("iata"); // 'iata', 'status', 'waitTime'
   const [activeLounge, setActiveLounge] = useState(null);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   // Layover trip planner states
   const [activeMode, setActiveMode] = useState("search"); // "search" or "planner"
@@ -2288,6 +2293,14 @@ export default function Home() {
 
   const isFiltered = search !== "" || filterStatus !== "all" || filterAmenity !== "all" || sortBy !== "iata";
 
+  const activeFilterCount = useMemo(() => {
+    let count = 0;
+    if (filterStatus !== "all") count++;
+    if (filterAmenity !== "all") count++;
+    if (sortBy !== "iata") count++;
+    return count;
+  }, [filterStatus, filterAmenity, sortBy]);
+
   // Compute live global statistics
   const stats = useMemo(() => {
     let regionAirports;
@@ -2509,32 +2522,32 @@ export default function Home() {
         {/* Live Statistics Panel */}
         {/* Mobile View: Compact Status Bar (saves vertical space, no cutoffs) */}
         <section className="block md:hidden mb-6">
-          <div className="grid grid-cols-4 divide-x divide-zinc-200/60 dark:divide-white/10 rounded-2xl border border-zinc-200/80 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 py-3.5 px-1 backdrop-blur-md shadow-sm">
+          <div className="grid grid-cols-4 divide-x divide-zinc-200/60 dark:divide-white/10 rounded-2xl border border-zinc-200/80 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 py-2.5 px-0.5 backdrop-blur-md shadow-sm">
             {/* Tracked */}
             <div className="flex flex-col items-center justify-center text-center">
-              <span className="text-sm">🏢</span>
-              <span className="mt-0.5 text-sm font-extrabold text-zinc-900 dark:text-white leading-none">{stats.total}</span>
-              <span className="mt-1 text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Lounges</span>
+              <span className="text-xs min-h-[16px]">🏢</span>
+              <span className="mt-0.5 text-xs min-[375px]:text-sm font-extrabold text-zinc-900 dark:text-white leading-none">{stats.total}</span>
+              <span className="mt-1 text-[8px] min-[375px]:text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Lounges</span>
             </div>
             {/* Open */}
             <div className="flex flex-col items-center justify-center text-center">
-              <span className="text-sm">🟢</span>
-              <span className="mt-0.5 text-sm font-extrabold text-emerald-600 dark:text-emerald-400 leading-none">{stats.open}</span>
-              <span className="mt-1 text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Open</span>
+              <span className="text-xs min-h-[16px]">🟢</span>
+              <span className="mt-0.5 text-xs min-[375px]:text-sm font-extrabold text-emerald-600 dark:text-emerald-400 leading-none">{stats.open}</span>
+              <span className="mt-1 text-[8px] min-[375px]:text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Open</span>
             </div>
             {/* Active Lines */}
             <div className="flex flex-col items-center justify-center text-center">
-              <span className="text-sm">⚠️</span>
-              <span className="mt-0.5 text-sm font-extrabold text-amber-600 dark:text-amber-400 leading-none">{stats.activeLines}</span>
-              <span className="mt-1 text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Lines</span>
+              <span className="text-xs min-h-[16px]">⚠️</span>
+              <span className="mt-0.5 text-xs min-[375px]:text-sm font-extrabold text-amber-600 dark:text-amber-400 leading-none">{stats.activeLines}</span>
+              <span className="mt-1 text-[8px] min-[375px]:text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Lines</span>
             </div>
             {/* Avg Wait */}
             <div className="flex flex-col items-center justify-center text-center">
-              <span className="text-sm">⏱️</span>
-              <span className="mt-0.5 text-sm font-extrabold text-indigo-600 dark:text-indigo-400 leading-none">
+              <span className="text-xs min-h-[16px]">⏱️</span>
+              <span className="mt-0.5 text-xs min-[375px]:text-sm font-extrabold text-indigo-600 dark:text-indigo-400 leading-none">
                 {stats.activeLines > 0 ? `${stats.avgWait}m` : "None"}
               </span>
-              <span className="mt-1 text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Avg Wait</span>
+              <span className="mt-1 text-[8px] min-[375px]:text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider truncate max-w-full px-0.5">Avg Wait</span>
             </div>
           </div>
         </section>
@@ -2580,10 +2593,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mb-6 flex gap-2 border-b border-zinc-200 dark:border-white/5 pb-0.5">
+        <section className="mb-6 flex gap-1 sm:gap-2 border-b border-zinc-200 dark:border-white/5 pb-0.5 overflow-x-auto scrollbar-none whitespace-nowrap scroll-smooth snap-x snap-mandatory">
           <button
             onClick={() => setActiveMode("search")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "search"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
@@ -2594,7 +2607,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveMode("planner")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "planner"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
@@ -2605,7 +2618,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveMode("trends")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "trends"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
@@ -2616,7 +2629,7 @@ export default function Home() {
           </button>
           <button
             onClick={() => setActiveMode("faq")}
-            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none ${
+            className={`pb-3 text-sm font-extrabold border-b-2 transition-all relative px-4 flex items-center gap-1.5 cursor-pointer focus:outline-none shrink-0 snap-start ${
               activeMode === "faq"
                 ? "border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400 font-black"
                 : "border-transparent text-zinc-400 hover:text-zinc-550 dark:hover:text-zinc-200"
@@ -2658,80 +2671,116 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-3 md:flex-row md:items-center">
                 
-                {/* Search Input */}
-                <div className="relative flex-1">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-zinc-400 dark:text-zinc-550">
-                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Search Airport, City, Lounge or Terminal..."
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="w-full rounded-xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900/40 py-2.5 pl-12 pr-4 text-sm text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    id="input-search-iata"
-                  />
-                </div>
-
-                {/* Filter & Sort selectors stack side-by-side on mobile, flex on desktop */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:flex md:items-center md:gap-3 shrink-0">
-                  <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
-                    <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Queue:</label>
-                    <select
-                      value={filterStatus}
-                      onChange={(e) => setFilterStatus(e.target.value)}
-                      className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
-                    >
-                      <option value="all">All Lounges</option>
-                      <option value="green">Walk-in Ready</option>
-                      <option value="yellow">Active Line</option>
-                      <option value="closed">Closed</option>
-                    </select>
+                {/* Search & Filter Header Row */}
+                <div className="flex items-center gap-2 w-full flex-1">
+                  {/* Search Input */}
+                  <div className="relative flex-1">
+                    <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-zinc-400 dark:text-zinc-555">
+                      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </span>
+                    <input
+                      type="text"
+                      placeholder="Search Airport, City, Lounge or Terminal..."
+                      value={search}
+                      onChange={(e) => setSearch(e.target.value)}
+                      className="w-full rounded-xl border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-900/40 py-2.5 pl-12 pr-4 text-sm text-zinc-800 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                      id="input-search-iata"
+                    />
                   </div>
 
-                  <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
-                    <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Amenity:</label>
-                    <select
-                      value={filterAmenity}
-                      onChange={(e) => setFilterAmenity(e.target.value)}
-                      className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
-                    >
-                      <option value="all">All Amenities</option>
-                      <option value="showers">🚿 Showers</option>
-                      <option value="kids_play_area">👶 Kids Play</option>
-                      <option value="meeting_rooms">💻 Workspaces</option>
-                      <option value="food_drinks">🍲 Hot Buffet</option>
-                      <option value="runway_views">✈️ Runway Views</option>
-                      <option value="seat_ordering">📱 Seat Ordering</option>
-                    </select>
-                  </div>
+                  {/* Mobile Filter Toggle Button */}
+                  <button
+                    onClick={() => setShowMobileFilters(!showMobileFilters)}
+                    className={`md:hidden flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border text-sm font-bold transition-all duration-200 active:scale-95 shadow-sm cursor-pointer ${
+                      showMobileFilters || activeFilterCount > 0
+                        ? "bg-indigo-600 border-indigo-600 text-white dark:bg-indigo-500 dark:border-indigo-500"
+                        : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-white/10 text-zinc-700 dark:text-zinc-300"
+                    }`}
+                  >
+                    <span>⚙️</span>
+                    <span className="hidden xs:inline">Filters</span>
+                    {activeFilterCount > 0 && (
+                      <span className={`inline-flex items-center justify-center rounded-full text-[10px] font-black h-4.5 w-4.5 ${
+                        showMobileFilters || activeFilterCount > 0 ? "bg-white text-indigo-600" : "bg-indigo-600 text-white"
+                      }`}>
+                        {activeFilterCount}
+                      </span>
+                    )}
+                  </button>
 
-                  <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
-                    <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Sort:</label>
-                    <select
-                      value={sortBy}
-                      onChange={(e) => setSortBy(e.target.value)}
-                      className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
-                    >
-                      <option value="iata">Airport Code (A-Z)</option>
-                      <option value="name">Lounge Name (A-Z)</option>
-                      <option value="city">City Name (A-Z)</option>
-                      <option value="status">Queue Status</option>
-                      <option value="waitTime">Wait Time (Shortest)</option>
-                      <option value="waitTimeDesc">Wait Time (Longest)</option>
-                    </select>
-                  </div>
-
+                  {/* Mobile Quick Clear Button */}
                   {isFiltered && (
                     <button
-                      onClick={handleResetFilters}
-                      className="flex items-center justify-center gap-1.5 rounded-xl border border-dashed border-red-500/30 dark:border-red-500/20 hover:border-red-500/80 bg-red-500/5 hover:bg-red-500/10 px-3.5 py-2 text-xs font-extrabold text-red-600 dark:text-red-400 cursor-pointer transition-all duration-200 active:scale-95 shadow-sm text-center w-full md:w-auto"
+                      onClick={() => { handleResetFilters(); setShowMobileFilters(false); }}
+                      className="md:hidden flex items-center justify-center p-2.5 rounded-xl border border-dashed border-red-500/30 bg-red-500/5 text-red-600 dark:text-red-400 cursor-pointer active:scale-95 transition-all shadow-sm"
+                      title="Clear All Filters"
                     >
-                      Clear Filters
+                      ✕
                     </button>
                   )}
+                </div>
+
+                {/* Filter & Sort selectors: Collapsible on mobile, always visible on desktop (md:flex) */}
+                <div className={`${showMobileFilters ? "block" : "hidden"} md:block w-full md:w-auto shrink-0 transition-all duration-200`}>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:flex md:items-center md:gap-3">
+                    <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
+                      <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Queue:</label>
+                      <select
+                        value={filterStatus}
+                        onChange={(e) => setFilterStatus(e.target.value)}
+                        className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
+                      >
+                        <option value="all">All Lounges</option>
+                        <option value="green">Walk-in Ready</option>
+                        <option value="yellow">Active Line</option>
+                        <option value="closed">Closed</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
+                      <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Amenity:</label>
+                      <select
+                        value={filterAmenity}
+                        onChange={(e) => setFilterAmenity(e.target.value)}
+                        className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
+                      >
+                        <option value="all">All Amenities</option>
+                        <option value="showers">🚿 Showers</option>
+                        <option value="kids_play_area">👶 Kids Play</option>
+                        <option value="meeting_rooms">💻 Workspaces</option>
+                        <option value="food_drinks">🍲 Hot Buffet</option>
+                        <option value="runway_views">✈️ Runway Views</option>
+                        <option value="seat_ordering">📱 Seat Ordering</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 w-full bg-white dark:bg-zinc-900/40 px-3 py-2 border border-zinc-200/60 dark:border-white/10 rounded-xl shadow-sm dark:shadow-none">
+                      <label className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-450 dark:text-zinc-550 shrink-0">Sort:</label>
+                      <select
+                        value={sortBy}
+                        onChange={(e) => setSortBy(e.target.value)}
+                        className="bg-transparent text-xs font-semibold text-zinc-700 dark:text-zinc-300 focus:outline-none w-full cursor-pointer"
+                      >
+                        <option value="iata">Airport Code (A-Z)</option>
+                        <option value="name">Lounge Name (A-Z)</option>
+                        <option value="city">City Name (A-Z)</option>
+                        <option value="status">Queue Status</option>
+                        <option value="waitTime">Wait Time (Shortest)</option>
+                        <option value="waitTimeDesc">Wait Time (Longest)</option>
+                      </select>
+                    </div>
+
+                    {isFiltered && (
+                      <button
+                        onClick={handleResetFilters}
+                        className="hidden md:flex items-center justify-center gap-1.5 rounded-xl border border-dashed border-red-500/30 dark:border-red-500/20 hover:border-red-500/80 bg-red-500/5 hover:bg-red-500/10 px-3.5 py-2 text-xs font-extrabold text-red-600 dark:text-red-400 cursor-pointer transition-all duration-200 active:scale-95 shadow-sm text-center w-full md:w-auto"
+                      >
+                        Clear Filters
+                      </button>
+                    )}
+                  </div>
                 </div>
 
               </div>
