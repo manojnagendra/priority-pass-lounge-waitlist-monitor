@@ -47,24 +47,14 @@ A premium, responsive Next.js application that helps Priority Pass members track
 * **Styling**: Tailwind CSS 4 & Vanilla CSS (supporting dynamic Light/Dark modes)
 * **Layout Design**: Sleek glassmorphism, responsive flex grids, premium typography (Outfit/Inter).
 
----
-
-## 🔌 API Endpoints & Logic
+## 🔌 API Endpoints
 
 ### 1. Waitlist Status Scraper (`/api/status`)
 * **Endpoint**: `/api/status?slug={lounge-slug}`
-* **Scraping Target**: `https://waitwhile.com/locations/{slug}`
-* **Regex Extraction**:
-  * Operational Status: `isOpenMatch = html.match(/\"isOpen\"\s*:\s*(true|false)/)`
-  * Wait Seconds: `waitMatch = html.match(/\"wait\"\s*:\s*(-?\d+)/)`
-  * Queue Size: `numWaitingMatch = html.match(/\"numWaiting\"\s*:\s*(\d+)/)`
-* **Minutes Conversion**: `estimatedWaitMinutes = Math.round(waitSeconds / 60)`
 
 ### 2. Live Flight Gate Resolver (`/api/flight`)
 * **Flight Detail Query**: `/api/flight?carrier={IATA}&flightNumber={Num}&date={YYYY-MM-DD}&airportCode={IATA}`
 * **Flight Route Search**: `/api/flight?action=search&airportCode={Origin}&destination={Dest}&date={YYYY-MM-DD}`
-* **Integration**: Scrapes public tracking configurations from `https://flightaware.com/live/flight/{ICAO}{Num}` to fetch terminal gates.
-* **Route Resolution**: Parses route results from FlightAware's `findflight` endpoint, resolving ICAO symbols back to standard IATA.
 
 ---
 
