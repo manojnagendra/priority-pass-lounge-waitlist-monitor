@@ -42,15 +42,6 @@ A premium, responsive Next.js application that helps Priority Pass members track
 * **Styling**: Tailwind CSS 4 & Vanilla CSS (supporting dynamic Light/Dark modes)
 * **Layout Design**: Sleek glassmorphism, responsive flex grids, premium typography (Outfit/Inter).
 
-## 🔌 API Endpoints
-
-### 1. Waitlist Status (`/api/status`)
-* **Endpoint**: `/api/status?slug={lounge-slug}`
-
-### 2. Live Flight Gate Resolver (`/api/flight`)
-* **Flight Detail Query**: `/api/flight?carrier={IATA}&flightNumber={Num}&date={YYYY-MM-DD}&airportCode={IATA}`
-* **Flight Route Search**: `/api/flight?action=search&airportCode={Origin}&destination={Dest}&date={YYYY-MM-DD}`
-
 ---
 
 ## 💻 Local Development
