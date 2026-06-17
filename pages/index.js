@@ -2473,10 +2473,96 @@ export default function Home() {
         <title>Priority Pass LoungeQ | Live Airport Lounge Waitlist & Queue Tracker</title>
         <meta
           name="description"
-          content="Live remote waitlist status and estimated queue times for Priority Pass lounges worldwide."
+          content="Live remote waitlist status and estimated queue times for Priority Pass lounges worldwide. Track queues, plan layovers, and estimate walking times to gates."
         />
+        <meta name="keywords" content="Priority Pass, lounge waitlist, lounge queue tracker, airport lounge status, airport layover planner, lounge walking guide, Delhi Encalm lounge, Mumbai Adani lounge, Bangalore 080 lounge, SFO The Club, ATL Concourse F queue" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://lounge-waitlist.vercel.app/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://lounge-waitlist.vercel.app/" />
+        <meta property="og:title" content="Priority Pass LoungeQ | Live Airport Lounge Queue Monitor" />
+        <meta property="og:description" content="Check live waitlist sizes, estimate walking times to gates, and plan layovers across 54+ Priority Pass lounges worldwide." />
+        <meta property="og:site_name" content="Priority Pass LoungeQ" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://lounge-waitlist.vercel.app/" />
+        <meta name="twitter:title" content="Priority Pass LoungeQ | Live Airport Lounge Queue Monitor" />
+        <meta name="twitter:description" content="Check live waitlist sizes, estimate walking times to gates, and plan layovers across 54+ Priority Pass lounges worldwide." />
+
+        {/* Structured JSON-LD Schema for Software Application */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "Priority Pass LoungeQ",
+              "operatingSystem": "All",
+              "applicationCategory": "TravelApplication",
+              "browserRequirements": "Requires JavaScript",
+              "description": "Live remote waitlist tracker and layover trip planner for Priority Pass airport lounges worldwide. View real-time queue states, estimate walking times, and track lounge status transitions.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0.00",
+                "priceCurrency": "USD"
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "Priority Pass LoungeQ Community"
+              },
+              "url": "https://lounge-waitlist.vercel.app/"
+            })
+          }}
+        />
+
+        {/* Structured JSON-LD Schema for FAQs */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Why do some lounges show a \"Live Offline\" badge?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Some partner lounges (such as No1 Lounges in London Heathrow/Gatwick or Kyra Lounge in Hong Kong) do not use the Waitwhile queue network, or their servers may occasionally limit queries. To remain resilient, LoungeQ automatically shifts to an offline fallback calculation: it checks the current local hour in the lounge's specific timezone and determines if it is scheduled to be open or closed, changing the card badge to 'Open (Scheduled)'."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How are the Lounge Walking Guides calculated?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "When you enter a flight number or route, LoungeQ fetches active daily flight records from public flight schedules to resolve your departure gate and terminal. It then computes the post-security walking distance and time from the lounge to that gate, complete with helpful tips (like taking the Plane Train at ATL or the Skylink at DFW) based on airport terminal maps."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are flight schedules and gates updated in real-time?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. The Layover Trip Planner and Walking Guide dropdowns query live flight data schedules operating on the selected travel day, helping you avoid gate hallucinations."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is Priority Pass LoungeQ free to use?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, 100% free! LoungeQ is a community-driven, non-commercial tool designed to help travelers plan their airport layovers. We do not require signups, show ads, or track user data."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </Head>
 
       <div className="mx-auto max-w-7xl px-4 pt-8 pb-24 sm:px-6 lg:px-8 md:py-12">
