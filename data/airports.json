@@ -1405,5 +1405,161 @@
       "runway_views": true
     },
     "region": "oceania"
+  },
+  {
+    "code": "DEL",
+    "name": "Encalm Lounge (T3 International)",
+    "city": "Delhi",
+    "terminal": "Terminal 3 (International)",
+    "slug": "encalm-del-t3-intl",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 3, Airside, International Departures, near Gate 15.",
+    "menu_highlights": [
+      "Authentic Indian curries & biryani",
+      "Freshly made naan & parathas",
+      "Indian masala chai & local beverages"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "india"
+  },
+  {
+    "code": "DEL",
+    "name": "Encalm Lounge (T3 Domestic)",
+    "city": "Delhi",
+    "terminal": "Terminal 3 (Domestic)",
+    "slug": "encalm-del-t3-dom",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 3, Airside, Domestic Departures, near Gate 27.",
+    "menu_highlights": [
+      "Regional Indian hot buffet",
+      "Live south Indian dosa station",
+      "Traditional Indian sweets & snacks"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "india"
+  },
+  {
+    "code": "BOM",
+    "name": "Adani Lounge (T2 International)",
+    "city": "Mumbai",
+    "terminal": "Terminal 2 (International)",
+    "slug": "adani-bom-t2-intl",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 2, Airside, Level 4, near the international boarding gates.",
+    "menu_highlights": [
+      "Premium multi-cuisine buffet",
+      "Handcrafted signature cocktails & wine",
+      "Gourmet Indian street food street-cart"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": true,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "india"
+  },
+  {
+    "code": "BOM",
+    "name": "Adani Lounge (T2 Domestic)",
+    "city": "Mumbai",
+    "terminal": "Terminal 2 (Domestic)",
+    "slug": "adani-bom-t2-dom",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 2, Airside, Level 3, near Domestic boarding gates.",
+    "menu_highlights": [
+      "Traditional Maharashtrian dishes",
+      "Freshly brewed filter coffee & tea",
+      "Hot bakery items & desserts"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": false,
+      "runway_views": false
+    },
+    "region": "india"
+  },
+  {
+    "code": "BLR",
+    "name": "080 International Lounge",
+    "city": "Bangalore",
+    "terminal": "Terminal 2 (International)",
+    "slug": "080-blr-t2-intl",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 2, Airside, International Departures, near Gate 18.",
+    "menu_highlights": [
+      "Artisanal cocktails & fine liquor",
+      "Global fusion dining buffet",
+      "Freshly prepared waffle & pancake bar"
+    ],
+    "amenities": {
+      "showers": "yes",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": true
+    },
+    "region": "india"
+  },
+  {
+    "code": "BLR",
+    "name": "080 Domestic Lounge",
+    "city": "Bangalore",
+    "terminal": "Terminal 2 (Domestic)",
+    "slug": "080-blr-t2-dom",
+    "open_time": "00:00",
+    "close_time": "23:59",
+    "timezone": "Asia/Kolkata",
+    "directions": "Terminal 2, Airside, Domestic Departures, upper level.",
+    "menu_highlights": [
+      "Locally sourced south Indian filter coffee",
+      "Fresh hot buffet & live counters",
+      "Assorted gourmet cookies & cakes"
+    ],
+    "amenities": {
+      "showers": "no",
+      "kids_play_area": false,
+      "wifi": "high-speed",
+      "food_drinks": "hot-buffet",
+      "seat_ordering": false,
+      "meeting_rooms": true,
+      "runway_views": false
+    },
+    "region": "india"
   }
 ]

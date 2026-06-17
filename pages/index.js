@@ -2673,7 +2673,8 @@ export default function Home() {
                   { id: "south-america", label: "South America", icon: "🏔️" },
                   { id: "asia", label: "Asia", icon: "🏮" },
                   { id: "europe", label: "Europe", icon: "🏰" },
-                  { id: "oceania", label: "Oceania", icon: "🦘" }
+                  { id: "oceania", label: "Oceania", icon: "🦘" },
+                  { id: "india", label: "India", icon: "🇮🇳" }
                 ].map((reg) => (
                   <button
                     key={reg.id}
@@ -2763,6 +2764,7 @@ export default function Home() {
                         <option value="asia">🏮 Asia</option>
                         <option value="europe">🏰 Europe</option>
                         <option value="oceania">🦘 Oceania</option>
+                        <option value="india">🇮🇳 India</option>
                       </select>
                     </div>
 
