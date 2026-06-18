@@ -140,7 +140,7 @@ export default async function handler(req, res) {
       const isWaitlistOpenMatch = html.match(/\\"isWaitlistOpen\\"\s*:\s*(true|false)/);
       const isForceClosedMatch = html.match(/\\"isForceClosed\\"\s*:\s*(true|false)/);
       const numWaitingMatch = html.match(/\\"numWaiting\\"\s*:\s*(\d+)/);
-      const waitMatch = html.match(/\\"wait\\"\s*:\s*(-?\\d+)/);
+      const waitMatch = html.match(/\\"wait\\"\s*:\s*(-?\d+)/);
 
       // Fallbacks
       isOpen = isOpenMatch ? isOpenMatch[1] === 'true' : false;
