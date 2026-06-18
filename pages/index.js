@@ -92,7 +92,9 @@ function StatusCard({ lounge, refreshTrigger, onStatusLoaded, isFavorite, onTogg
     };
   }, [waitTime]);
 
-  const joinUrl = `https://waitwhile.com/locations/${lounge.slug}/welcome?qr=true`;
+  const joinUrl = lounge.waitlist_provider === 'google-lineup'
+    ? `https://lineup.withgoogle.com/queue/${lounge.waitlist_id}`
+    : `https://waitwhile.com/locations/${lounge.slug}/welcome?qr=true`;
 
   return (
     <div className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl border p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 bg-white/80 dark:bg-zinc-900/60 hover:bg-white dark:hover:bg-zinc-900/80 shadow-sm hover:shadow-xl dark:shadow-none hover:shadow-indigo-500/5 dark:hover:shadow-indigo-500/10 ${
