@@ -101,20 +101,24 @@ export default async function handler(req, res) {
       // Filter tickets created within expiration hours
       const now = Date.now();
       const expirationMs = expirationHours * 60 * 60 * 1000;
+      let activeWaiting = 0;
 
       if (tickets) {
         for (const ticket of Object.values(tickets)) {
           const createdAt = ticket.created_at || 0;
+          // Count total open tickets to align with Google Lineup UI "people ahead of you"
+          numWaiting++;
+          // Count only active open tickets for wait time calculation
           if (now - createdAt < expirationMs) {
-            numWaiting++;
+            activeWaiting++;
           }
         }
       }
 
       isOpen = true;
-      isWaitlistOpen = numWaiting > 0;
+      isWaitlistOpen = activeWaiting > 0;
       isForceClosed = false;
-      waitSeconds = numWaiting > 0 ? numWaiting * 10 * 60 : -1; // 10 mins per party in seconds
+      waitSeconds = activeWaiting > 0 ? activeWaiting * 10 * 60 : -1; // 10 mins per party in seconds based on active tickets
     } else {
       const url = `https://waitwhile.com/locations/${slug}`;
       const response = await fetch(url, {
