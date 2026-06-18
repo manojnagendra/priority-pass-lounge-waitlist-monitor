@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import airportsData from "../data/airports.json";
 
 function formatWaitTime(minutes) {
-  if (minutes === undefined || minutes === null || minutes < 0) return "Wait time not available";
+  if (minutes === undefined || minutes === null || minutes < 0) return "N/A";
   if (minutes === 0) return "1-5m";
   if (minutes >= 60) {
     const hrs = Math.floor(minutes / 60);
@@ -12,6 +12,18 @@ function formatWaitTime(minutes) {
   }
   return `${minutes}m`;
 }
+
+function getLoungeWaitDisplay(liveInfo) {
+  if (!liveInfo || liveInfo.loading) return "Loading...";
+  if (liveInfo.status === "CLOSED") return "Closed";
+  if (liveInfo.status === "GREEN") return "Walk-in";
+  if (liveInfo.status === "YELLOW") {
+    const wait = liveInfo.estimatedWaitMinutes;
+    return wait >= 0 ? formatWaitTime(wait) : "N/A";
+  }
+  return "Walk-in";
+}
+
 
 function StatusCard({ lounge, refreshTrigger, onStatusLoaded, isFavorite, onToggleFavorite, onOpenDetails, hasAlert, onToggleAlert }) {
   const [statusData, setStatusData] = useState(null);
@@ -2330,7 +2342,8 @@ export default function Home() {
       total: regionAirports.length,
       open: 0,
       activeLines: 0,
-      avgWait: 0
+      avgWait: 0,
+      waitCount: 0
     };
     
     let totalWait = 0;
@@ -2353,6 +2366,7 @@ export default function Home() {
     });
 
     report.avgWait = waitCount > 0 ? Math.round(totalWait / waitCount) : 0;
+    report.waitCount = waitCount;
     return report;
   }, [liveStatuses, filterRegion, favorites]);
 
@@ -2654,7 +2668,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center text-center">
               <span className="text-xs min-h-[16px]">⏱️</span>
               <span className="mt-0.5 text-xs min-[375px]:text-sm font-extrabold text-indigo-600 dark:text-indigo-400 leading-none">
-                {stats.activeLines > 0 ? `${stats.avgWait}m` : "None"}
+                {stats.activeLines > 0 ? (stats.waitCount > 0 ? `${stats.avgWait}m` : "N/A") : "None"}
               </span>
               <span className="mt-1 text-[8px] min-[375px]:text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider truncate max-w-full px-0.5">Avg Wait</span>
             </div>
@@ -2693,7 +2707,7 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-white/5 bg-white/80 dark:bg-zinc-900/30 p-5 backdrop-blur-sm shadow-sm dark:shadow-none transition-all hover:scale-[1.02] duration-200">
             <span className="block text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Avg Wait Time</span>
             <span className="mt-1.5 block text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">
-              {stats.activeLines > 0 ? `${stats.avgWait}m` : "No Line"}
+              {stats.activeLines > 0 ? (stats.waitCount > 0 ? `${stats.avgWait}m` : "N/A") : "No Line"}
             </span>
             <div className="absolute right-3 bottom-3 opacity-10 dark:opacity-20 text-indigo-500">
               <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -3208,7 +3222,7 @@ export default function Home() {
                                     <div className="flex items-center justify-between border-t border-zinc-100 dark:border-white/5 pt-2 mt-2">
                                       <span className="text-[9px] text-zinc-500 dark:text-zinc-450">
                                         ⏱️ Wait: <span className="font-bold text-zinc-700 dark:text-zinc-300">
-                                          {liveStatuses[lounge.slug]?.estimatedWaitMinutes ? formatWaitTime(liveStatuses[lounge.slug].estimatedWaitMinutes) : "Walk-in"}
+                                          {getLoungeWaitDisplay(liveStatuses[lounge.slug])}
                                         </span>
                                       </span>
                                       <span className="text-[9px] font-bold text-indigo-600 dark:text-indigo-400 group-hover:underline">
