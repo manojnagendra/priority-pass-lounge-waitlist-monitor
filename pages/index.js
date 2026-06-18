@@ -2344,8 +2344,11 @@ export default function Home() {
       }
       if (info.status === "YELLOW") {
         report.activeLines++;
-        totalWait += info.estimatedWaitMinutes || 0;
-        waitCount++;
+        const wait = info.estimatedWaitMinutes;
+        if (wait !== undefined && wait !== null && wait >= 0) {
+          totalWait += wait;
+          waitCount++;
+        }
       }
     });
 
@@ -2445,7 +2448,10 @@ export default function Home() {
         const getWait = (slug) => {
           const live = liveStatuses[slug];
           if (!live || live.loading) return 9999;
-          if (live.status === "YELLOW") return live.estimatedWaitMinutes;
+          if (live.status === "YELLOW") {
+            const wait = live.estimatedWaitMinutes;
+            return wait >= 0 ? wait : 999; // Treat unknown/negative wait as 999
+          }
           if (live.status === "GREEN") return 0;
           return 9999; // Closed at bottom
         };
@@ -2456,7 +2462,10 @@ export default function Home() {
         const getWait = (slug) => {
           const live = liveStatuses[slug];
           if (!live || live.loading) return -1;
-          if (live.status === "YELLOW") return live.estimatedWaitMinutes;
+          if (live.status === "YELLOW") {
+            const wait = live.estimatedWaitMinutes;
+            return wait >= 0 ? wait : 0; // Treat unknown/negative wait as 0
+          }
           if (live.status === "GREEN") return 0;
           return -1; // Closed at bottom
         };
