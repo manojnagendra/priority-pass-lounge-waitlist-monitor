@@ -995,7 +995,7 @@
     "name": "No1 Lounge (Terminal 3)",
     "city": "London",
     "terminal": "Terminal 3 (Lounge Zone F)",
-    "slug": "no1-lounge-lhr-t3",
+    "slug": "lhr3m",
     "open_time": "05:00",
     "close_time": "22:00",
     "timezone": "Europe/London",
