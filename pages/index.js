@@ -2221,12 +2221,26 @@ export default function Home() {
     }));
   };
 
-  // Auto-refresh interval (every 60 seconds) to update live status queue conditions
+  // Auto-refresh interval (every 60 seconds) to update live status queue conditions when visible
   useEffect(() => {
     const interval = setInterval(() => {
-      handleRefresh();
+      if (!document.hidden) {
+        handleRefresh();
+      }
     }, 60000);
-    return () => clearInterval(interval);
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        handleRefresh();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   const prevStatusesRef = useRef({});

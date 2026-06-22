@@ -23,7 +23,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "BOS",
@@ -49,7 +50,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "BUF",
@@ -75,7 +77,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "BWI",
@@ -101,7 +104,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "CHS",
@@ -127,7 +131,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "CLE",
@@ -153,7 +158,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "CLT",
@@ -179,7 +185,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "CVG",
@@ -205,7 +212,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "DFW",
@@ -231,7 +239,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "GRR",
@@ -257,7 +266,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "IAD",
@@ -284,7 +294,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "LAS",
@@ -310,7 +321,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "LAS",
@@ -336,7 +348,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "MCO",
@@ -362,7 +375,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "MCO",
@@ -388,7 +402,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "MDW",
@@ -414,7 +429,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "MSY",
@@ -441,7 +457,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "PIT",
@@ -467,7 +484,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SEA",
@@ -493,7 +511,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SEA",
@@ -519,7 +538,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SFO",
@@ -546,7 +566,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SJC",
@@ -572,7 +593,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SJC",
@@ -598,7 +620,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "LIM",
@@ -624,7 +647,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "south-america"
+    "region": "south-america",
+    "waitlist_provider": "none"
   },
   {
     "code": "HKG",
@@ -650,7 +674,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "asia"
+    "region": "asia",
+    "waitlist_provider": "none"
   },
   {
     "code": "LGW",
@@ -676,7 +701,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "LHR",
@@ -702,7 +728,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "ANC",
@@ -728,7 +755,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "LAX",
@@ -754,7 +782,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "PDX",
@@ -780,7 +809,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SEA",
@@ -806,7 +836,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SEA",
@@ -832,7 +863,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "SEA",
@@ -858,7 +890,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "JFK",
@@ -884,7 +917,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "YYZ",
@@ -910,7 +944,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "none"
   },
   {
     "code": "YYZ",
@@ -936,7 +971,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "none"
   },
   {
     "code": "YVR",
@@ -962,7 +998,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "none"
   },
   {
     "code": "YUL",
@@ -988,7 +1025,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "north-america"
+    "region": "north-america",
+    "waitlist_provider": "none"
   },
   {
     "code": "LHR",
@@ -1014,7 +1052,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "waitwhile"
   },
   {
     "code": "LHR",
@@ -1040,7 +1079,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "LGW",
@@ -1066,7 +1106,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "LGW",
@@ -1092,7 +1133,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "BHX",
@@ -1118,7 +1160,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "EDI",
@@ -1144,7 +1187,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "FRA",
@@ -1170,7 +1214,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "FRA",
@@ -1196,7 +1241,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "MUC",
@@ -1222,7 +1268,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "CDG",
@@ -1248,7 +1295,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "AMS",
@@ -1330,7 +1378,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "FCO",
@@ -1356,7 +1405,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "europe"
+    "region": "europe",
+    "waitlist_provider": "none"
   },
   {
     "code": "SYD",
@@ -1382,7 +1432,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "oceania"
+    "region": "oceania",
+    "waitlist_provider": "none"
   },
   {
     "code": "MEL",
@@ -1408,7 +1459,8 @@
       "meeting_rooms": false,
       "runway_views": true
     },
-    "region": "oceania"
+    "region": "oceania",
+    "waitlist_provider": "none"
   },
   {
     "code": "DEL",
@@ -1434,7 +1486,8 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   },
   {
     "code": "DEL",
@@ -1460,7 +1513,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   },
   {
     "code": "BOM",
@@ -1486,7 +1540,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   },
   {
     "code": "BOM",
@@ -1512,7 +1567,8 @@
       "meeting_rooms": false,
       "runway_views": false
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   },
   {
     "code": "BLR",
@@ -1538,7 +1594,8 @@
       "meeting_rooms": true,
       "runway_views": true
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   },
   {
     "code": "BLR",
@@ -1564,6 +1621,7 @@
       "meeting_rooms": true,
       "runway_views": false
     },
-    "region": "india"
+    "region": "india",
+    "waitlist_provider": "none"
   }
 ]

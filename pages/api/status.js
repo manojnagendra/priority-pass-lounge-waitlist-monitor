@@ -45,15 +45,65 @@ export default async function handler(req, res) {
     return res.status(404).json({ error: 'Lounge configuration not found for the specified slug.' });
   }
 
+  const isLive = airport.waitlist_provider === 'waitwhile' || airport.waitlist_provider === 'google-lineup';
+
   // Retrieve cached entry if valid
   const cachedEntry = cache.get(slug);
   const nowTime = Date.now();
   if (cachedEntry && nowTime - cachedEntry.timestamp < CACHE_TTL) {
+    const maxAge = isLive ? 60 : 600;
     res.setHeader('X-Cache', 'HIT');
+    res.setHeader('Cache-Control', `public, max-age=${maxAge}, s-maxage=${maxAge}, stale-while-revalidate=30`);
     return res.status(200).json({
       ...cachedEntry.data,
       isCached: true
     });
+  }
+
+  // Return computed timezone-based scheduled status directly for fallback lounges
+  if (!isLive) {
+    const now = new Date();
+    let isInsideHours = false;
+    let currentTimeString = 'N/A';
+    try {
+      const localString = now.toLocaleString("en-US", { timeZone: airport.timezone });
+      const localDate = new Date(localString);
+      const currentHour = localDate.getHours();
+      const currentMinute = localDate.getMinutes();
+      currentTimeString = `${String(currentHour).padStart(2, '0')}:${String(currentMinute).padStart(2, '0')}`;
+      isInsideHours = currentTimeString >= airport.open_time && currentTimeString <= airport.close_time;
+    } catch (tzErr) {
+      console.error('Timezone parsing error in scheduled status:', tzErr);
+    }
+
+    const status = isInsideHours ? 'GREEN' : 'CLOSED';
+    const responseData = {
+      slug,
+      name: airport.name,
+      iata: airport.code,
+      terminal: airport.terminal,
+      open_time: airport.open_time,
+      close_time: airport.close_time,
+      timezone: airport.timezone,
+      currentTime: currentTimeString,
+      isInsideHours,
+      isOpen: isInsideHours,
+      isWaitlistOpen: false,
+      isForceClosed: false,
+      status,
+      estimatedWaitMinutes: 0,
+      partiesWaiting: 0,
+      isOfflineFallback: false
+    };
+
+    cache.set(slug, {
+      timestamp: Date.now(),
+      data: responseData
+    });
+
+    res.setHeader('X-Cache', 'MISS');
+    res.setHeader('Cache-Control', 'public, max-age=600, s-maxage=600, stale-while-revalidate=30');
+    return res.status(200).json(responseData);
   }
 
   // Setup abort controller for timeout
@@ -203,6 +253,7 @@ export default async function handler(req, res) {
     });
 
     res.setHeader('X-Cache', 'MISS');
+    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=60, stale-while-revalidate=10');
     return res.status(200).json(responseData);
 
   } catch (error) {
@@ -212,6 +263,7 @@ export default async function handler(req, res) {
     // Stale-While-Revalidate Resilience: serve stale cache if fetch fails
     if (cachedEntry) {
       res.setHeader('X-Cache', 'STALE');
+      res.setHeader('Cache-Control', 'public, max-age=10, s-maxage=10, stale-while-revalidate=10');
       return res.status(200).json({
         ...cachedEntry.data,
         isStale: true,
@@ -257,6 +309,7 @@ export default async function handler(req, res) {
       offlineReason: error.name === 'AbortError' ? 'Fetch request timed out' : error.message
     };
 
+    res.setHeader('Cache-Control', 'public, max-age=10, s-maxage=10, stale-while-revalidate=10');
     return res.status(200).json(fallbackData);
   }
 }
